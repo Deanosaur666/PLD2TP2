@@ -1,0 +1,51 @@
+Benchmark 1: mpirun -n 1 --oversubscribe sati
+  Time (mean ± σ):     146.1 ms ±  27.4 ms    [User: 61.3 ms, System: 44.5 ms]
+  Range (min … max):    88.0 ms … 173.9 ms    20 runs
+ 
+Benchmark 2: mpirun -n 2 --oversubscribe sati
+  Time (mean ± σ):     115.3 ms ±  22.2 ms    [User: 58.2 ms, System: 43.4 ms]
+  Range (min … max):    85.4 ms … 169.2 ms    26 runs
+ 
+Benchmark 3: mpirun -n 3 --oversubscribe sati
+  Time (mean ± σ):     118.0 ms ±  19.2 ms    [User: 71.3 ms, System: 56.6 ms]
+  Range (min … max):    85.8 ms … 155.7 ms    29 runs
+ 
+Benchmark 4: mpirun -n 4 --oversubscribe sati
+  Time (mean ± σ):     114.7 ms ±  11.3 ms    [User: 81.9 ms, System: 62.0 ms]
+  Range (min … max):    91.6 ms … 141.9 ms    21 runs
+ 
+Benchmark 5: mpirun -n 5 --oversubscribe sati
+  Time (mean ± σ):     116.3 ms ±  14.8 ms    [User: 89.6 ms, System: 68.9 ms]
+  Range (min … max):    92.3 ms … 149.1 ms    29 runs
+ 
+Benchmark 6: mpirun -n 6 --oversubscribe sati
+  Time (mean ± σ):     181.5 ms ±  44.5 ms    [User: 199.7 ms, System: 137.6 ms]
+  Range (min … max):   103.9 ms … 239.8 ms    22 runs
+ 
+Benchmark 7: mpirun -n 7 --oversubscribe sati
+  Time (mean ± σ):     201.6 ms ±  31.0 ms    [User: 250.7 ms, System: 170.7 ms]
+  Range (min … max):   125.9 ms … 254.4 ms    23 runs
+ 
+Benchmark 8: mpirun -n 8 --oversubscribe sati
+  Time (mean ± σ):     189.4 ms ±  38.1 ms    [User: 220.1 ms, System: 163.6 ms]
+  Range (min … max):   118.8 ms … 239.8 ms    15 runs
+ 
+Benchmark 9: mpirun -n 9 --oversubscribe sati
+  Time (mean ± σ):     181.0 ms ±  39.7 ms    [User: 204.6 ms, System: 148.5 ms]
+  Range (min … max):   122.5 ms … 249.6 ms    15 runs
+ 
+Benchmark 10: mpirun -n 10 --oversubscribe sati
+  Time (mean ± σ):     187.3 ms ±  44.2 ms    [User: 230.6 ms, System: 163.4 ms]
+  Range (min … max):   122.5 ms … 249.6 ms    11 runs
+ 
+Summary
+  mpirun -n 4 --oversubscribe sati ran
+    1.01 ± 0.22 times faster than mpirun -n 2 --oversubscribe sati
+    1.01 ± 0.16 times faster than mpirun -n 5 --oversubscribe sati
+    1.03 ± 0.20 times faster than mpirun -n 3 --oversubscribe sati
+    1.27 ± 0.27 times faster than mpirun -n 1 --oversubscribe sati
+    1.58 ± 0.38 times faster than mpirun -n 9 --oversubscribe sati
+    1.58 ± 0.42 times faster than mpirun -n 6 --oversubscribe sati
+    1.63 ± 0.42 times faster than mpirun -n 10 --oversubscribe sati
+    1.65 ± 0.37 times faster than mpirun -n 8 --oversubscribe sati
+    1.76 ± 0.32 times faster than mpirun -n 7 --oversubscribe sati
