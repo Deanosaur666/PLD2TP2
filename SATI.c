@@ -36,13 +36,14 @@ int main (int argc, char *argv[]) {
    /* Stop timer */
    elapsed_time += MPI_Wtime();
 
+   /*
    if (!id) {
       printf ("Execution time %8.6f\n", elapsed_time);
       fflush (stdout);
    }
+   */
    MPI_Finalize();
-   if (!id) printf ("There are %d different solutions\n",
-      global_count);
+   //if (!id) printf ("There are %d different solutions\n", global_count);
    return 0;
 }
 
@@ -63,10 +64,12 @@ int check_circuit (int id, int z) {
       && (v[9] || v[11]) && (v[10] || v[11])
       && (v[12] || v[13]) && (v[13] || !v[14])
       && (v[14] || v[15])) {
+      /*
       printf ("%d) %d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d\n", id,
          v[0],v[1],v[2],v[3],v[4],v[5],v[6],v[7],v[8],v[9],
          v[10],v[11],v[12],v[13],v[14],v[15]);
       fflush (stdout);
+      */
       return 1;
    } else return 0;
 }
