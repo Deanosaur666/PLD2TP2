@@ -27,9 +27,7 @@ numerals 0-9, given these constraints:
 
 // these values don't consider the consecutive digit rule
 #define MIN_ID 100000
-#define REAL_MIN_ID 101010
 #define MAX_ID 999999
-#define REAL_MAX_ID 989898
 
 // the sum can't be 7, 11, or 13
 int digitsum(char * id) {
@@ -69,29 +67,28 @@ int main(int argc, char *argv[]) {
 
     MPI_Init (&argc, &argv);
 
-   /* Start timer */
-   MPI_Barrier (MPI_COMM_WORLD);
-   elapsed_time = - MPI_Wtime();
+    /* Start timer */
+    MPI_Barrier (MPI_COMM_WORLD);
+    elapsed_time = - MPI_Wtime();
 
-   MPI_Comm_rank (MPI_COMM_WORLD, &id);
-   MPI_Comm_size (MPI_COMM_WORLD, &p);
+    MPI_Comm_rank (MPI_COMM_WORLD, &id);
+    MPI_Comm_size (MPI_COMM_WORLD, &p);
 
-   count = 0;
-   for (i = MIN_ID + id; i < MAX_ID; i += p)
-      count += checkID (i);
 
-   MPI_Reduce (&count, &global_count, 1, MPI_INT, MPI_SUM, 0,
-      MPI_COMM_WORLD); 
+    count = 0;
+    for (i = MIN_ID + id; i < MAX_ID; i += p)
+        count += checkID (i);
+
+    MPI_Reduce (&count, &global_count, 1, MPI_INT, MPI_SUM, 0,
+        MPI_COMM_WORLD); 
 
     /* Stop timer */
     elapsed_time += MPI_Wtime();
     if (!id) {
-      printf ("Execution time %8.6f\n", elapsed_time);
-      fflush (stdout);
+        printf ("T: %8.6f s\n", elapsed_time);
+        fflush (stdout);
     }
 
     MPI_Finalize();
-    if (!id)
-        printf ("There are %d different solutions\n", global_count);
     return 0;
 }

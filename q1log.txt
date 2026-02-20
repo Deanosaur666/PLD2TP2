@@ -1,0 +1,17 @@
+Benchmark 1: mpirun -n 1 --oversubscribe sati
+  Time (mean ± σ):     148.1 ms ±  21.5 ms    [User: 59.8 ms, System: 47.3 ms]
+  Range (min … max):   108.1 ms … 176.7 ms    17 runs
+ 
+Benchmark 2: mpirun -n 2 --oversubscribe sati
+  Time (mean ± σ):     128.7 ms ±  15.7 ms    [User: 66.2 ms, System: 51.7 ms]
+  Range (min … max):   107.8 ms … 155.0 ms    25 runs
+ 
+Benchmark 3: mpirun -n 3 --oversubscribe sati
+  Time (mean ± σ):     121.0 ms ±  15.4 ms    [User: 75.4 ms, System: 59.0 ms]
+  Range (min … max):    94.4 ms … 145.0 ms    25 runs
+ 
+Benchmark 4: mpirun -n 4 --oversubscribe sati
+  Time (mean ± σ):     152.7 ms ±  34.3 ms    [User: 132.8 ms, System: 88.3 ms]
+  Range (min … max):   111.9 ms … 215.5 ms    13 runs
+ 
+Benchmark 5: mpirun -n 5 --oversubscribe sati

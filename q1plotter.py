@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import re
 
-with open("./log.txt", "r") as file:
+with open("./q1log.txt", "r") as file:
     fileStr = file.read()
 
 pattern = r"mpirun -n (\d+).*\n.*Time \(mean ± σ\):\s+(\d+\.\d+) ms"
