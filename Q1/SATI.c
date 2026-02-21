@@ -36,12 +36,12 @@ int main (int argc, char *argv[]) {
    /* Stop timer */
    elapsed_time += MPI_Wtime();
 
-   /*
+   
    if (!id) {
-      printf ("Execution time %8.6f\n", elapsed_time);
+      printf ("T: %8.6f\n", elapsed_time);
       fflush (stdout);
    }
-   */
+   
    MPI_Finalize();
    //if (!id) printf ("There are %d different solutions\n", global_count);
    return 0;

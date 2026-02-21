@@ -2,14 +2,23 @@ import matplotlib.pyplot as plt
 import numpy as np
 import re
 
+times = {}
+
 with open("./q1log.txt", "r") as file:
-    fileStr = file.read()
+    p = 0
+    for line in file:
+        if line[0] == "P":
+            p = int(re.search(r"(\d+)", line).group(1))
+            times[p] = []
+        elif line[0] == "T":
+            t = float(re.search(r"(\d*\.\d+)", line).group(1))
+            times[p].append(t)
 
-pattern = r"mpirun -n (\d+).*\n.*Time \(mean ± σ\):\s+(\d+\.\d+) ms"
-matches = re.findall(pattern, fileStr)
-
-proc, time = zip(*matches)
-proc, time = list(map(int, proc)), list(map(float, time))
+proc = []
+time = []
+for p in range(1, 11):
+    proc.append(p)
+    time.append((sum(times[p]) / len(times[p])) * 1000.0) # convert seconds to milliseconds
 expectedtime = []
 for i in range(len(proc)):
     expectedtime.append(time[0]/(i+1))
