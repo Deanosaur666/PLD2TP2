@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 
     count = 0;
     for (i = MIN_ID + id; i < MAX_ID; i += p)
-        count += checkID (i);
+        count += checkID(i);
 
     MPI_Reduce (&count, &global_count, 1, MPI_INT, MPI_SUM, 0,
         MPI_COMM_WORLD); 
