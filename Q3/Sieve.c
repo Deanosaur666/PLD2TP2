@@ -103,9 +103,10 @@ int main (int argc, char *argv[])
    /* Print the results */
 
    if (!id) {
-      printf ("There are %d primes less than or equal to %d\n",
-         global_count, n);
-      printf ("SIEVE (%d) %10.6f\n", p, elapsed_time);
+      //printf ("There are %d primes less than or equal to %d\n",
+      //   global_count, n);
+      //printf ("SIEVE (%d) %10.6f\n", p, elapsed_time);
+      printf ("T: %10.6f\n", elapsed_time);
    }
    MPI_Finalize ();
    return 0;

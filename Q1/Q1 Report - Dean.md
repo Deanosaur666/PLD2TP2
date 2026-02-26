@@ -34,9 +34,10 @@ I created a bash file for benchmarking. It reads:
 ```bash
 #! /bin/bash
 echo "Q1" > "q1log.txt"
-for p in {1..10}
+for p in {1..30}
 do
 	echo "P: $p" >> q1log.txt
+	echo "P: $p" # so we can monitor progress
 	for i in {1..20}
 	do
 		mpirun -n $p --oversubscribe sati >> q1log.txt
@@ -49,30 +50,32 @@ I ran the program 20 times for each process count. The output to `q1log.txt` loo
 ```
 Q1
 P: 1
-T: 0.003368
-T: 0.002617
-T: 0.002598
-T: 0.007540
-T: 0.009259
+T: 0.002704
+T: 0.005429
+T: 0.009221
+T: 0.006354
+T: 0.006377
+T: 0.009163
 T: 0.009185
-T: 0.002607
-T: 0.003049
-T: 0.006355
-T: 0.006347
-T: 0.009194
-T: 0.009211
-T: 0.009220
-T: 0.002878
-T: 0.007891
-T: 0.004834
-T: 0.003291
-T: 0.009180
-T: 0.009191
-T: 0.009187
+T: 0.004860
+T: 0.009204
+T: 0.009196
+T: 0.006373
+T: 0.003964
+T: 0.002604
+T: 0.004131
+T: 0.009216
+T: 0.009195
+T: 0.009167
+T: 0.003294
+T: 0.009216
+T: 0.009171
 P: 2
-T: 0.001403
-T: 0.002068
-T: 0.004863
+T: 0.002593
+T: 0.001413
+T: 0.002260
+T: 0.001501
+T: 0.003099
 ...
 ```
 
@@ -84,10 +87,14 @@ To extract the results from the log file, and visualize them in a line graph, I 
 
 # Takeaways
 
-I expected the program to have peak performance at 4 processors, since that's the number of processors my computer actually has, but it actually has the best performance at 10. It's also interesting that at 3 and 4 processors, the real performance is better than the expected performance.
+I expected the program to have peak performance at 4 processors, since that's the number of processors my computer actually has, but it actually has the best performance at 17.
 
-Additionally, 5, 6, 7, and 8 processors perform worse than either 4 or 9 processors. It's hard to guess why these middle numbers have worse performance than either side of them.
+At 2, 3, and 4 processors the real results were even better than the idealized expected time. It's hard to guess why. The code is very simple, and all analysis suggests 2 processors should really only be twice as fast. It's possible the `MPI_Reduce` function performs disproportionally slower at just 1 process, but that wouldn't make much sense.
 
-It's certainly possible, since the task of testing circuit satisfiability takes a variable amount of time (due to short-circuiting), that some process counts just had very lopsided distribution by chance (perhaps process 3 got all the long ones, for example). That's my best guess.
+This behavior is consistent across all tests I've performed, but I've simply never been able to justify it.
 
-I performed 20 tests for each count, and closed as many background programs as I could, so I doubt I can practically push my tests to be much more accurate, but I also doubt my computer is well suited for this kind of test.
+There's a spike at 7, but from 9 on,  the shape of the real time graph is pretty close to the expected time graph.
+
+After the minimum value reached at 17, the real time gradually increases, as a trend. It's slight, but I would assume the time will slowly continue to increase as we go beyond 30.
+
+The fact that the program is optimal at 17, far beyond my real processor count of 4, suggests that MPI's parallelization is very effective even on a single processor.

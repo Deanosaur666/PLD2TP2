@@ -41,35 +41,46 @@ I created a bash file for benchmarking. It reads:
 ```bash
 #! /bin/bash
 echo "Q2" > "q2log.txt"
-for p in {1..10}
+for p in {1..30}
 do
 	echo "P: $p" >> q2log.txt
-	for i in {1..5}
+	echo "P: $p" # so we can monitor progress
+	for i in {1..20}
 	do
 		mpirun -n $p --oversubscribe q2 >> q2log.txt
 	done
 done
 ```
 
-I ran the program 5 times for each process count, as required by question 2. The output to `q2log.txt` looked like:
+I ran the program 20 times for each process count. The output to `q2log.txt` looked like:
 
 ```
 Q2
 P: 1
-T: 0.065038 s
-T: 0.063883 s
-T: 0.073802 s
-T: 0.072916 s
-T: 0.071771 s
+T: 0.074175 s
+T: 0.087600 s
+T: 0.077718 s
+T: 0.084953 s
+T: 0.078401 s
+T: 0.071897 s
+T: 0.067269 s
+T: 0.078525 s
+T: 0.064668 s
+T: 0.084758 s
+T: 0.083995 s
+T: 0.067355 s
+T: 0.074425 s
+T: 0.065048 s
+T: 0.086018 s
+T: 0.074042 s
+T: 0.074104 s
+T: 0.081815 s
+T: 0.074902 s
+T: 0.073949 s
 P: 2
-T: 0.033112 s
-T: 0.039299 s
-T: 0.033180 s
-T: 0.037568 s
-T: 0.046802 s
-P: 3
-T: 0.022140 s
-T: 0.027808 s
+T: 0.037123 s
+T: 0.040269 s
+T: 0.043098 s
 ...
 ```
 
@@ -81,10 +92,16 @@ To extract the results from the log file, and visualize them in a line graph, I 
 
 # Takeaways
 
-I expected the program to have peak performance at 4 processors, since that's the number of processors my computer actually has, but it actually has the best performance at 10.
+I expected the program to have peak performance at 4 processors, since that's the number of processors my computer actually has, but it actually has the best performance at 17.
 
-Additionally, 4, 5, 6, and 7 processors perform worse than either 3 or 7 processors (which are roughly the same). It's hard to guess why these middle numbers have worse performance than either side of them.
+There is a very large upward spike around 5 processes. 4, 5, 6, and 7 processes all do worse than 3 or less. Could this be the result of bad programming on my part? No, that's impossible!
 
-It's certainly possible, since the task of testing valid IDs takes a variable amount of time (as explained earlier), that some process counts just had very lopsided distribution by chance (perhaps process 3 got all the long ones, for example). That's my best guess.
+My best explanation is that 4, 5, 6, 7, and even 8 processes simply result in a very lopsided distribution of work. They all still perform better than 1 processor. If the work distribution for 2 processors was 50%/50%, but the work distribution for 5 was 80%/5%/5%/5%/5%, it's clear how that would be slower.
 
-However, it feels improper to make any conclusions off a benchmark with just 5 tests per process count. I would have certainly done more tests if I could, but the requirements of this question have my hands tied.
+Simply divvying up the numbers evenly is not the same as divvying up the work evenly. I expect there's a better method, but Foster's Flowchart suggests cyclic mapping for a task like this, which is what I did (as far as I can tell), so perhaps there is no real solution to this problem.
+
+![[Flowchart.png]]
+
+After the minimum value reached at 17, the real time gradually increases, as a trend. It's slight, but I would assume the time will slowly continue to increase as we go beyond 30.
+
+The fact that the program is optimal at 17, far beyond my real processor count of 4, suggests that MPI's parallelization is very effective even on a single processor.

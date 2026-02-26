@@ -5,7 +5,7 @@ import re
 times = {}
 maxp = 0
 
-with open("./q1log.txt", "r") as file:
+with open("./q3log1.txt", "r") as file:
     p = 0
     for line in file:
         if line[0] == "P":
