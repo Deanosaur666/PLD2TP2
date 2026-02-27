@@ -1,4 +1,4 @@
-all: sieve
+all: sieve psieve
 
 sieve : Sieve.c
 	@mpicc Sieve.c -o sieve -Wall -lm
