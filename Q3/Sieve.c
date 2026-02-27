@@ -72,17 +72,22 @@ int main (int argc, char *argv[])
       exit (1);
    }
 
-   for (i = 0; i < size; i++) marked[i] = 0;
-   if (!id) index = 0;
+   for (i = 0; i < size; i++)
+      marked[i] = 0;
+   if (!id)
+      index = 0;
    prime = 2;
    do {
       if (prime * prime > low_value)
          first = prime * prime - low_value;
       else {
-         if (!(low_value % prime)) first = 0;
-         else first = prime - (low_value % prime);
+         if (!(low_value % prime))
+            first = 0;
+         else
+            first = prime - (low_value % prime);
       }
-      for (i = first; i < size; i += prime) marked[i] = 1;
+      for (i = first; i < size; i += prime)
+         marked[i] = 1;
       if (!id) {
          while (marked[++index]);
          prime = index + 2;
@@ -92,7 +97,8 @@ int main (int argc, char *argv[])
    } while (prime * prime <= n);
    count = 0;
    for (i = 0; i < size; i++)
-      if (!marked[i]) count++;
+      if (!marked[i])
+         count++;
    if (p > 1)
       MPI_Reduce (&count, &global_count, 1, MPI_INT, MPI_SUM,
          0, MPI_COMM_WORLD);
