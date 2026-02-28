@@ -40,11 +40,13 @@ int main (int argc, char *argv[])
    int    p;            /* Number of processes */
    int    proc0_size;   /* Size of proc 0's subarray */
    int    prime;        /* Current prime */
+   int    nextPrime;    /* Next prime, recieved */
+   int    sentPrime;    /* Sent prime */
    int    size;         /* Elements in 'marked' */
 
    // send and recieve requests and status, for Isend and Irecv
    MPI_Request send_request, recv_request;
-   MPI_Status send_status, recv_status;
+   MPI_Status recv_status;
 
    MPI_Init (&argc, &argv);
 
@@ -98,6 +100,9 @@ int main (int argc, char *argv[])
       index = 0;
    prime = 2;
    do {
+      if(id > 0) {
+         MPI_Irecv(&nextPrime, 1, MPI_INT, id - 1, 0, MPI_COMM_WORLD, &recv_request);
+      }
       if (prime * prime > low_value)
          first = prime * prime - low_value;
       else {
@@ -118,12 +123,14 @@ int main (int argc, char *argv[])
          //MPI_Bcast (&prime,  1, MPI_INT, 0, MPI_COMM_WORLD);
          // processes after 1 recieve
          if(id > 0) {
-            MPI_Irecv(&prime, 1, MPI_INT, id - 1, 0, MPI_COMM_WORLD, &recv_request);
+            //MPI_Irecv(&prime, 1, MPI_INT, id - 1, 0, MPI_COMM_WORLD, &recv_request);
             MPI_Wait(&recv_request, &recv_status);
+            prime = nextPrime;
          }
          // processes before the last send
          if(id < p-1) {
-            MPI_Isend(&prime, 1, MPI_INT, id + 1, 0, MPI_COMM_WORLD, &send_request);
+            sentPrime = prime;
+            MPI_Isend(&sentPrime, 1, MPI_INT, id + 1, 0, MPI_COMM_WORLD, &send_request);
          }
       }
    } while (prime * prime <= n);
@@ -131,6 +138,7 @@ int main (int argc, char *argv[])
    for (i = 0; i < size; i++)
       if (!marked[i])
          count++;
+
    if (p > 1)
       MPI_Reduce (&count, &global_count, 1, MPI_INT, MPI_SUM,
          0, MPI_COMM_WORLD);

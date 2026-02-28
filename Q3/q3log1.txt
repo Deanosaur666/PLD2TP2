@@ -1,1231 +1,1231 @@
 Q3
 P: 1
 C: 6542 primes under 65535
-T:   0.000986
+T:   0.000693
 C: 6542 primes under 65535
-T:   0.000946
+T:   0.001509
 C: 6542 primes under 65535
-T:   0.000998
+T:   0.002160
 C: 6542 primes under 65535
-T:   0.000984
+T:   0.001160
 C: 6542 primes under 65535
-T:   0.000987
+T:   0.001494
 C: 6542 primes under 65535
-T:   0.000980
+T:   0.002190
 C: 6542 primes under 65535
-T:   0.000972
+T:   0.001165
 C: 6542 primes under 65535
-T:   0.000987
+T:   0.000849
 C: 6542 primes under 65535
-T:   0.001008
+T:   0.001501
 C: 6542 primes under 65535
-T:   0.001041
+T:   0.002178
 C: 6542 primes under 65535
-T:   0.000973
+T:   0.002187
 C: 6542 primes under 65535
-T:   0.001025
+T:   0.002186
 C: 6542 primes under 65535
-T:   0.000941
+T:   0.002173
 C: 6542 primes under 65535
-T:   0.000973
+T:   0.002168
 C: 6542 primes under 65535
-T:   0.001006
+T:   0.002179
 C: 6542 primes under 65535
-T:   0.000924
+T:   0.002182
 C: 6542 primes under 65535
-T:   0.001058
+T:   0.002180
 C: 6542 primes under 65535
-T:   0.000978
+T:   0.002173
 C: 6542 primes under 65535
-T:   0.000973
+T:   0.001520
 C: 6542 primes under 65535
-T:   0.001006
+T:   0.002188
 P: 2
 C: 6542 primes under 65535
-T:   0.001422
+T:   0.000426
 C: 6542 primes under 65535
-T:   0.000697
+T:   0.000503
+C: 6542 primes under 65535
+T:   0.000600
+C: 6542 primes under 65535
+T:   0.000627
+C: 6542 primes under 65535
+T:   0.000436
+C: 6542 primes under 65535
+T:   0.000801
+C: 6542 primes under 65535
+T:   0.000746
+C: 6542 primes under 65535
+T:   0.001401
+C: 6542 primes under 65535
+T:   0.000404
+C: 6542 primes under 65535
+T:   0.000794
+C: 6542 primes under 65535
+T:   0.001400
+C: 6542 primes under 65535
+T:   0.000755
+C: 6542 primes under 65535
+T:   0.000747
+C: 6542 primes under 65535
+T:   0.000746
+C: 6542 primes under 65535
+T:   0.000732
+C: 6542 primes under 65535
+T:   0.000985
+C: 6542 primes under 65535
+T:   0.000737
+C: 6542 primes under 65535
+T:   0.000981
+C: 6542 primes under 65535
+T:   0.000612
+C: 6542 primes under 65535
+T:   0.000973
+P: 3
+C: 6542 primes under 65535
+T:   0.000314
+C: 6542 primes under 65535
+T:   0.000348
+C: 6542 primes under 65535
+T:   0.000620
+C: 6542 primes under 65535
+T:   0.000623
+C: 6542 primes under 65535
+T:   0.000424
+C: 6542 primes under 65535
+T:   0.000688
+C: 6542 primes under 65535
+T:   0.000498
+C: 6542 primes under 65535
+T:   0.000386
+C: 6542 primes under 65535
+T:   0.000625
+C: 6542 primes under 65535
+T:   0.000502
+C: 6542 primes under 65535
+T:   0.000622
+C: 6542 primes under 65535
+T:   0.000372
+C: 6542 primes under 65535
+T:   0.004764
+C: 6542 primes under 65535
+T:   0.000338
+C: 6542 primes under 65535
+T:   0.000522
+C: 6542 primes under 65535
+T:   0.000418
+C: 6542 primes under 65535
+T:   0.000769
+C: 6542 primes under 65535
+T:   0.000428
+C: 6542 primes under 65535
+T:   0.000592
+C: 6542 primes under 65535
+T:   0.000353
+P: 4
+C: 6542 primes under 65535
+T:   0.000650
+C: 6542 primes under 65535
+T:   0.000344
+C: 6542 primes under 65535
+T:   0.000275
+C: 6542 primes under 65535
+T:   0.002173
+C: 6542 primes under 65535
+T:   0.000376
+C: 6542 primes under 65535
+T:   0.000611
+C: 6542 primes under 65535
+T:   0.001300
+C: 6542 primes under 65535
+T:   0.000348
+C: 6542 primes under 65535
+T:   0.000363
+C: 6542 primes under 65535
+T:   0.001201
+C: 6542 primes under 65535
+T:   0.000268
+C: 6542 primes under 65535
+T:   0.000431
+C: 6542 primes under 65535
+T:   0.000548
+C: 6542 primes under 65535
+T:   0.000356
+C: 6542 primes under 65535
+T:   0.000331
+C: 6542 primes under 65535
+T:   0.000271
+C: 6542 primes under 65535
+T:   0.000376
+C: 6542 primes under 65535
+T:   0.000368
+C: 6542 primes under 65535
+T:   0.000825
+C: 6542 primes under 65535
+T:   0.000351
+P: 5
+C: 6542 primes under 65535
+T:   0.001320
+C: 6542 primes under 65535
+T:   0.000985
 C: 6542 primes under 65535
 T:   0.000692
 C: 6542 primes under 65535
-T:   0.000672
+T:   0.000501
 C: 6542 primes under 65535
-T:   0.000677
+T:   0.000498
 C: 6542 primes under 65535
-T:   0.000656
+T:   0.000597
 C: 6542 primes under 65535
-T:   0.000716
+T:   0.000419
 C: 6542 primes under 65535
-T:   0.000702
+T:   0.000429
 C: 6542 primes under 65535
-T:   0.000731
+T:   0.000447
 C: 6542 primes under 65535
-T:   0.000682
-C: 6542 primes under 65535
-T:   0.000674
-C: 6542 primes under 65535
-T:   0.000673
-C: 6542 primes under 65535
-T:   0.000671
+T:   0.000559
 C: 6542 primes under 65535
 T:   0.000668
 C: 6542 primes under 65535
-T:   0.000678
+T:   0.000476
 C: 6542 primes under 65535
-T:   0.000692
+T:   0.000565
 C: 6542 primes under 65535
-T:   0.000686
+T:   0.000479
 C: 6542 primes under 65535
-T:   0.000674
+T:   0.000472
 C: 6542 primes under 65535
-T:   0.000687
+T:   0.000710
 C: 6542 primes under 65535
-T:   0.000688
-P: 3
+T:   0.000547
 C: 6542 primes under 65535
-T:   0.002043
+T:   0.000510
 C: 6542 primes under 65535
-T:   0.002170
+T:   0.000583
 C: 6542 primes under 65535
-T:   0.001954
+T:   0.000871
+P: 6
 C: 6542 primes under 65535
-T:   0.000863
+T:   0.000553
 C: 6542 primes under 65535
-T:   0.000894
+T:   0.000611
 C: 6542 primes under 65535
-T:   0.002738
+T:   0.000634
 C: 6542 primes under 65535
-T:   0.000775
+T:   0.000783
 C: 6542 primes under 65535
-T:   0.001004
+T:   0.000613
 C: 6542 primes under 65535
-T:   0.001222
+T:   0.000460
 C: 6542 primes under 65535
-T:   0.000800
+T:   0.000486
 C: 6542 primes under 65535
-T:   0.001106
+T:   0.000529
 C: 6542 primes under 65535
-T:   0.002793
+T:   0.000464
 C: 6542 primes under 65535
-T:   0.002246
+T:   0.000626
 C: 6542 primes under 65535
-T:   0.001247
+T:   0.000720
 C: 6542 primes under 65535
-T:   0.002056
+T:   0.000414
 C: 6542 primes under 65535
-T:   0.001964
+T:   0.000462
 C: 6542 primes under 65535
-T:   0.001052
+T:   0.000394
 C: 6542 primes under 65535
-T:   0.000778
+T:   0.000765
 C: 6542 primes under 65535
-T:   0.001030
+T:   0.000478
 C: 6542 primes under 65535
-T:   0.000914
-P: 4
+T:   0.000480
 C: 6542 primes under 65535
-T:   0.001084
+T:   0.000734
 C: 6542 primes under 65535
-T:   0.001566
+T:   0.000509
 C: 6542 primes under 65535
-T:   0.000963
+T:   0.000611
+P: 7
+C: 6542 primes under 65535
+T:   0.000920
+C: 6542 primes under 65535
+T:   0.000441
+C: 6542 primes under 65535
+T:   0.003167
+C: 6542 primes under 65535
+T:   0.000660
+C: 6542 primes under 65535
+T:   0.000689
+C: 6542 primes under 65535
+T:   0.000814
 C: 6542 primes under 65535
 T:   0.000959
 C: 6542 primes under 65535
-T:   0.000925
+T:   0.000950
 C: 6542 primes under 65535
-T:   0.001047
+T:   0.001708
 C: 6542 primes under 65535
-T:   0.000999
+T:   0.000822
 C: 6542 primes under 65535
-T:   0.001003
-C: 6542 primes under 65535
-T:   0.000995
-C: 6542 primes under 65535
-T:   0.001041
-C: 6542 primes under 65535
-T:   0.001245
-C: 6542 primes under 65535
-T:   0.000969
-C: 6542 primes under 65535
-T:   0.001038
-C: 6542 primes under 65535
-T:   0.000998
-C: 6542 primes under 65535
-T:   0.001479
-C: 6542 primes under 65535
-T:   0.000990
-C: 6542 primes under 65535
-T:   0.000990
-C: 6542 primes under 65535
-T:   0.001064
-C: 6542 primes under 65535
-T:   0.000938
-C: 6542 primes under 65535
-T:   0.000999
-P: 5
-C: 6542 primes under 65535
-T:   0.002657
-C: 6542 primes under 65535
-T:   0.002883
-C: 6542 primes under 65535
-T:   0.001364
-C: 6542 primes under 65535
-T:   0.001865
-C: 6542 primes under 65535
-T:   0.001359
-C: 6542 primes under 65535
-T:   0.001332
-C: 6542 primes under 65535
-T:   0.001552
-C: 6542 primes under 65535
-T:   0.001393
-C: 6542 primes under 65535
-T:   0.001476
-C: 6542 primes under 65535
-T:   0.001417
-C: 6542 primes under 65535
-T:   0.001316
-C: 6542 primes under 65535
-T:   0.001388
-C: 6542 primes under 65535
-T:   0.001824
-C: 6542 primes under 65535
-T:   0.001589
-C: 6542 primes under 65535
-T:   0.001326
-C: 6542 primes under 65535
-T:   0.001368
-C: 6542 primes under 65535
-T:   0.001425
-C: 6542 primes under 65535
-T:   0.001430
-C: 6542 primes under 65535
-T:   0.001443
-C: 6542 primes under 65535
-T:   0.001380
-P: 6
-C: 6542 primes under 65535
-T:   0.001435
-C: 6542 primes under 65535
-T:   0.001536
-C: 6542 primes under 65535
-T:   0.001802
-C: 6542 primes under 65535
-T:   0.001709
-C: 6542 primes under 65535
-T:   0.001618
-C: 6542 primes under 65535
-T:   0.001485
-C: 6542 primes under 65535
-T:   0.001607
-C: 6542 primes under 65535
-T:   0.001293
-C: 6542 primes under 65535
-T:   0.002176
-C: 6542 primes under 65535
-T:   0.001554
-C: 6542 primes under 65535
-T:   0.001389
-C: 6542 primes under 65535
-T:   0.001720
-C: 6542 primes under 65535
-T:   0.002100
-C: 6542 primes under 65535
-T:   0.001782
-C: 6542 primes under 65535
-T:   0.001824
-C: 6542 primes under 65535
-T:   0.001457
-C: 6542 primes under 65535
-T:   0.001595
-C: 6542 primes under 65535
-T:   0.002262
-C: 6542 primes under 65535
-T:   0.002000
-C: 6542 primes under 65535
-T:   0.001622
-P: 7
-C: 6542 primes under 65535
-T:   0.001813
-C: 6542 primes under 65535
-T:   0.001869
-C: 6542 primes under 65535
-T:   0.001823
-C: 6542 primes under 65535
-T:   0.002114
-C: 6542 primes under 65535
-T:   0.001721
-C: 6542 primes under 65535
-T:   0.003407
-C: 6542 primes under 65535
-T:   0.001944
-C: 6542 primes under 65535
-T:   0.002035
-C: 6542 primes under 65535
-T:   0.002056
-C: 6542 primes under 65535
-T:   0.002413
-C: 6542 primes under 65535
-T:   0.001928
-C: 6542 primes under 65535
-T:   0.002199
-C: 6542 primes under 65535
-T:   0.002242
-C: 6542 primes under 65535
-T:   0.002265
-C: 6542 primes under 65535
-T:   0.001807
-C: 6542 primes under 65535
-T:   0.001783
-C: 6542 primes under 65535
-T:   0.002289
-C: 6542 primes under 65535
-T:   0.001808
-C: 6542 primes under 65535
-T:   0.002053
-C: 6542 primes under 65535
-T:   0.001922
-P: 8
-C: 6542 primes under 65535
-T:   0.002215
-C: 6542 primes under 65535
-T:   0.002083
-C: 6542 primes under 65535
-T:   0.001776
-C: 6542 primes under 65535
-T:   0.001963
-C: 6542 primes under 65535
-T:   0.002382
-C: 6542 primes under 65535
-T:   0.002800
-C: 6542 primes under 65535
-T:   0.002232
-C: 6542 primes under 65535
-T:   0.001711
-C: 6542 primes under 65535
-T:   0.005501
-C: 6542 primes under 65535
-T:   0.002528
-C: 6542 primes under 65535
-T:   0.001635
-C: 6542 primes under 65535
-T:   0.002238
-C: 6542 primes under 65535
-T:   0.001774
-C: 6542 primes under 65535
-T:   0.001825
-C: 6542 primes under 65535
-T:   0.002075
-C: 6542 primes under 65535
-T:   0.002248
-C: 6542 primes under 65535
-T:   0.001978
-C: 6542 primes under 65535
-T:   0.002196
-C: 6542 primes under 65535
-T:   0.002260
-C: 6542 primes under 65535
-T:   0.001587
-P: 9
-C: 6542 primes under 65535
-T:   0.002412
-C: 6542 primes under 65535
-T:   0.002164
-C: 6542 primes under 65535
-T:   0.002334
-C: 6542 primes under 65535
-T:   0.002938
-C: 6542 primes under 65535
-T:   0.002304
-C: 6542 primes under 65535
-T:   0.002702
-C: 6542 primes under 65535
-T:   0.009067
-C: 6542 primes under 65535
-T:   0.003053
-C: 6542 primes under 65535
-T:   0.002164
-C: 6542 primes under 65535
-T:   0.002305
-C: 6542 primes under 65535
-T:   0.002511
-C: 6542 primes under 65535
-T:   0.002039
-C: 6542 primes under 65535
-T:   0.002530
-C: 6542 primes under 65535
-T:   0.002950
-C: 6542 primes under 65535
-T:   0.002716
-C: 6542 primes under 65535
-T:   0.002744
-C: 6542 primes under 65535
-T:   0.002385
-C: 6542 primes under 65535
-T:   0.002298
-C: 6542 primes under 65535
-T:   0.002200
-C: 6542 primes under 65535
-T:   0.004098
-P: 10
-C: 6542 primes under 65535
-T:   0.003339
-C: 6542 primes under 65535
-T:   0.002580
-C: 6542 primes under 65535
-T:   0.005112
-C: 6542 primes under 65535
-T:   0.002537
-C: 6542 primes under 65535
-T:   0.002978
-C: 6542 primes under 65535
-T:   0.003317
-C: 6542 primes under 65535
-T:   0.005142
-C: 6542 primes under 65535
-T:   0.002310
-C: 6542 primes under 65535
-T:   0.002674
-C: 6542 primes under 65535
-T:   0.002436
-C: 6542 primes under 65535
-T:   0.002609
-C: 6542 primes under 65535
-T:   0.002978
-C: 6542 primes under 65535
-T:   0.003138
-C: 6542 primes under 65535
-T:   0.003219
+T:   0.000768
 C: 6542 primes under 65535
 T:   0.002721
 C: 6542 primes under 65535
-T:   0.002699
+T:   0.002444
 C: 6542 primes under 65535
-T:   0.002757
+T:   0.000909
 C: 6542 primes under 65535
-T:   0.002760
+T:   0.000788
 C: 6542 primes under 65535
-T:   0.002854
+T:   0.002746
 C: 6542 primes under 65535
-T:   0.002572
+T:   0.001984
+C: 6542 primes under 65535
+T:   0.000601
+C: 6542 primes under 65535
+T:   0.000457
+C: 6542 primes under 65535
+T:   0.001791
+P: 8
+C: 6542 primes under 65535
+T:   0.000906
+C: 6542 primes under 65535
+T:   0.000730
+C: 6542 primes under 65535
+T:   0.000640
+C: 6542 primes under 65535
+T:   0.001208
+C: 6542 primes under 65535
+T:   0.000828
+C: 6542 primes under 65535
+T:   0.000901
+C: 6542 primes under 65535
+T:   0.000540
+C: 6542 primes under 65535
+T:   0.001304
+C: 6542 primes under 65535
+T:   0.000766
+C: 6542 primes under 65535
+T:   0.000885
+C: 6542 primes under 65535
+T:   0.000809
+C: 6542 primes under 65535
+T:   0.000948
+C: 6542 primes under 65535
+T:   0.001003
+C: 6542 primes under 65535
+T:   0.000833
+C: 6542 primes under 65535
+T:   0.001633
+C: 6542 primes under 65535
+T:   0.002284
+C: 6542 primes under 65535
+T:   0.000685
+C: 6542 primes under 65535
+T:   0.000909
+C: 6542 primes under 65535
+T:   0.000595
+C: 6542 primes under 65535
+T:   0.000961
+P: 9
+C: 6542 primes under 65535
+T:   0.000481
+C: 6542 primes under 65535
+T:   0.001796
+C: 6542 primes under 65535
+T:   0.000918
+C: 6542 primes under 65535
+T:   0.001198
+C: 6542 primes under 65535
+T:   0.001002
+C: 6542 primes under 65535
+T:   0.000828
+C: 6542 primes under 65535
+T:   0.000566
+C: 6542 primes under 65535
+T:   0.000733
+C: 6542 primes under 65535
+T:   0.000576
+C: 6542 primes under 65535
+T:   0.000793
+C: 6542 primes under 65535
+T:   0.000636
+C: 6542 primes under 65535
+T:   0.001082
+C: 6542 primes under 65535
+T:   0.000699
+C: 6542 primes under 65535
+T:   0.001246
+C: 6542 primes under 65535
+T:   0.000701
+C: 6542 primes under 65535
+T:   0.000910
+C: 6542 primes under 65535
+T:   0.000794
+C: 6542 primes under 65535
+T:   0.001286
+C: 6542 primes under 65535
+T:   0.000837
+C: 6542 primes under 65535
+T:   0.000966
+P: 10
+C: 6542 primes under 65535
+T:   0.000670
+C: 6542 primes under 65535
+T:   0.000701
+C: 6542 primes under 65535
+T:   0.000638
+C: 6542 primes under 65535
+T:   0.001435
+C: 6542 primes under 65535
+T:   0.000794
+C: 6542 primes under 65535
+T:   0.001090
+C: 6542 primes under 65535
+T:   0.000580
+C: 6542 primes under 65535
+T:   0.001252
+C: 6542 primes under 65535
+T:   0.000527
+C: 6542 primes under 65535
+T:   0.000851
+C: 6542 primes under 65535
+T:   0.000832
+C: 6542 primes under 65535
+T:   0.000765
+C: 6542 primes under 65535
+T:   0.000664
+C: 6542 primes under 65535
+T:   0.001140
+C: 6542 primes under 65535
+T:   0.000771
+C: 6542 primes under 65535
+T:   0.000773
+C: 6542 primes under 65535
+T:   0.000602
+C: 6542 primes under 65535
+T:   0.001367
+C: 6542 primes under 65535
+T:   0.000899
+C: 6542 primes under 65535
+T:   0.000614
 P: 11
 C: 6542 primes under 65535
-T:   0.002864
+T:   0.000837
 C: 6542 primes under 65535
-T:   0.002400
+T:   0.000820
 C: 6542 primes under 65535
-T:   0.004337
+T:   0.001059
 C: 6542 primes under 65535
-T:   0.002752
+T:   0.000770
 C: 6542 primes under 65535
-T:   0.002631
+T:   0.000818
 C: 6542 primes under 65535
-T:   0.006005
+T:   0.000945
 C: 6542 primes under 65535
-T:   0.003265
+T:   0.000501
 C: 6542 primes under 65535
-T:   0.002666
+T:   0.000691
 C: 6542 primes under 65535
-T:   0.002878
+T:   0.000739
 C: 6542 primes under 65535
-T:   0.002761
+T:   0.000807
 C: 6542 primes under 65535
-T:   0.003454
+T:   0.000639
 C: 6542 primes under 65535
-T:   0.003123
+T:   0.001161
 C: 6542 primes under 65535
-T:   0.002502
+T:   0.000736
 C: 6542 primes under 65535
-T:   0.002770
+T:   0.000659
 C: 6542 primes under 65535
-T:   0.003401
+T:   0.000745
 C: 6542 primes under 65535
-T:   0.002787
+T:   0.000667
 C: 6542 primes under 65535
-T:   0.003789
+T:   0.001004
 C: 6542 primes under 65535
-T:   0.002643
+T:   0.001047
 C: 6542 primes under 65535
-T:   0.003404
+T:   0.000742
 C: 6542 primes under 65535
-T:   0.003473
+T:   0.000669
 P: 12
 C: 6542 primes under 65535
-T:   0.003785
+T:   0.000606
 C: 6542 primes under 65535
-T:   0.003003
+T:   0.000755
 C: 6542 primes under 65535
-T:   0.004357
+T:   0.000938
 C: 6542 primes under 65535
-T:   0.004316
+T:   0.000864
 C: 6542 primes under 65535
-T:   0.003675
+T:   0.000858
 C: 6542 primes under 65535
-T:   0.009346
+T:   0.001114
 C: 6542 primes under 65535
-T:   0.003460
+T:   0.000739
 C: 6542 primes under 65535
-T:   0.003526
+T:   0.000937
 C: 6542 primes under 65535
-T:   0.003743
+T:   0.000956
 C: 6542 primes under 65535
-T:   0.003772
+T:   0.001016
 C: 6542 primes under 65535
-T:   0.004390
+T:   0.001043
 C: 6542 primes under 65535
-T:   0.004789
+T:   0.000969
 C: 6542 primes under 65535
-T:   0.003840
+T:   0.000672
 C: 6542 primes under 65535
-T:   0.003258
+T:   0.001278
 C: 6542 primes under 65535
-T:   0.003823
+T:   0.000572
 C: 6542 primes under 65535
-T:   0.003132
+T:   0.000606
 C: 6542 primes under 65535
-T:   0.003550
+T:   0.000815
 C: 6542 primes under 65535
-T:   0.003997
+T:   0.000650
 C: 6542 primes under 65535
-T:   0.003557
+T:   0.000937
 C: 6542 primes under 65535
-T:   0.003315
+T:   0.000778
 P: 13
 C: 6542 primes under 65535
-T:   0.004387
+T:   0.000895
 C: 6542 primes under 65535
-T:   0.003605
+T:   0.000674
 C: 6542 primes under 65535
-T:   0.004142
+T:   0.000966
 C: 6542 primes under 65535
-T:   0.003497
+T:   0.001470
 C: 6542 primes under 65535
-T:   0.004569
+T:   0.001406
 C: 6542 primes under 65535
-T:   0.003106
+T:   0.001225
 C: 6542 primes under 65535
-T:   0.003390
+T:   0.000747
 C: 6542 primes under 65535
-T:   0.004277
+T:   0.001261
 C: 6542 primes under 65535
-T:   0.005285
+T:   0.000915
 C: 6542 primes under 65535
-T:   0.004227
+T:   0.001092
 C: 6542 primes under 65535
-T:   0.004446
+T:   0.000860
 C: 6542 primes under 65535
-T:   0.004315
+T:   0.001595
 C: 6542 primes under 65535
-T:   0.004185
+T:   0.000708
 C: 6542 primes under 65535
-T:   0.004258
+T:   0.001036
 C: 6542 primes under 65535
-T:   0.003887
+T:   0.000802
 C: 6542 primes under 65535
-T:   0.003318
+T:   0.000630
 C: 6542 primes under 65535
-T:   0.004211
+T:   0.000938
 C: 6542 primes under 65535
-T:   0.004465
+T:   0.000792
 C: 6542 primes under 65535
-T:   0.003574
+T:   0.001141
 C: 6542 primes under 65535
-T:   0.003980
+T:   0.000607
 P: 14
 C: 6542 primes under 65535
-T:   0.004433
+T:   0.001095
 C: 6542 primes under 65535
-T:   0.004370
+T:   0.000707
 C: 6542 primes under 65535
-T:   0.003788
+T:   0.001048
 C: 6542 primes under 65535
-T:   0.007341
+T:   0.001128
 C: 6542 primes under 65535
-T:   0.003408
+T:   0.000907
 C: 6542 primes under 65535
-T:   0.004803
+T:   0.001025
 C: 6542 primes under 65535
-T:   0.005527
+T:   0.000999
 C: 6542 primes under 65535
-T:   0.003787
+T:   0.000778
 C: 6542 primes under 65535
-T:   0.003851
+T:   0.000784
 C: 6542 primes under 65535
-T:   0.003871
+T:   0.000733
 C: 6542 primes under 65535
-T:   0.003219
+T:   0.000772
 C: 6542 primes under 65535
-T:   0.004010
+T:   0.001109
 C: 6542 primes under 65535
-T:   0.004668
+T:   0.001617
 C: 6542 primes under 65535
-T:   0.004325
+T:   0.000680
 C: 6542 primes under 65535
-T:   0.003539
+T:   0.001161
 C: 6542 primes under 65535
-T:   0.003287
+T:   0.000795
 C: 6542 primes under 65535
-T:   0.004360
+T:   0.001222
 C: 6542 primes under 65535
-T:   0.003585
+T:   0.000706
 C: 6542 primes under 65535
-T:   0.003749
+T:   0.000915
 C: 6542 primes under 65535
-T:   0.004335
+T:   0.001189
 P: 15
 C: 6542 primes under 65535
-T:   0.004525
+T:   0.000843
 C: 6542 primes under 65535
-T:   0.003928
+T:   0.000781
 C: 6542 primes under 65535
-T:   0.003682
+T:   0.000794
 C: 6542 primes under 65535
-T:   0.005957
+T:   0.000916
 C: 6542 primes under 65535
-T:   0.004256
+T:   0.000837
 C: 6542 primes under 65535
-T:   0.003684
+T:   0.000958
 C: 6542 primes under 65535
-T:   0.003872
+T:   0.000995
 C: 6542 primes under 65535
-T:   0.003910
+T:   0.000924
 C: 6542 primes under 65535
-T:   0.004133
+T:   0.000728
 C: 6542 primes under 65535
-T:   0.003875
+T:   0.000866
 C: 6542 primes under 65535
-T:   0.003446
+T:   0.000774
 C: 6542 primes under 65535
-T:   0.004973
+T:   0.003048
 C: 6542 primes under 65535
-T:   0.004324
+T:   0.001045
 C: 6542 primes under 65535
-T:   0.004855
+T:   0.000949
 C: 6542 primes under 65535
-T:   0.023341
+T:   0.000925
 C: 6542 primes under 65535
-T:   0.003978
+T:   0.000894
 C: 6542 primes under 65535
-T:   0.003807
+T:   0.000725
 C: 6542 primes under 65535
-T:   0.004654
+T:   0.000858
 C: 6542 primes under 65535
-T:   0.006848
+T:   0.001044
 C: 6542 primes under 65535
-T:   0.004116
+T:   0.000814
 P: 16
 C: 6542 primes under 65535
-T:   0.007565
+T:   0.000769
 C: 6542 primes under 65535
-T:   0.005482
+T:   0.000872
 C: 6542 primes under 65535
-T:   0.009005
+T:   0.000795
 C: 6542 primes under 65535
-T:   0.003584
+T:   0.000897
 C: 6542 primes under 65535
-T:   0.005427
+T:   0.000816
 C: 6542 primes under 65535
-T:   0.004087
+T:   0.000850
 C: 6542 primes under 65535
-T:   0.004066
+T:   0.000955
 C: 6542 primes under 65535
-T:   0.004776
+T:   0.000783
 C: 6542 primes under 65535
-T:   0.004075
+T:   0.001127
 C: 6542 primes under 65535
-T:   0.005273
+T:   0.000936
 C: 6542 primes under 65535
-T:   0.004905
+T:   0.000993
 C: 6542 primes under 65535
-T:   0.004001
+T:   0.001048
 C: 6542 primes under 65535
-T:   0.004572
+T:   0.000911
 C: 6542 primes under 65535
-T:   0.005517
+T:   0.000999
 C: 6542 primes under 65535
-T:   0.007476
+T:   0.000880
 C: 6542 primes under 65535
-T:   0.004241
+T:   0.001121
 C: 6542 primes under 65535
-T:   0.003311
+T:   0.000956
 C: 6542 primes under 65535
-T:   0.004059
+T:   0.001038
 C: 6542 primes under 65535
-T:   0.003661
+T:   0.000764
 C: 6542 primes under 65535
-T:   0.004308
+T:   0.001102
 P: 17
 C: 6542 primes under 65535
-T:   0.006337
+T:   0.000839
 C: 6542 primes under 65535
-T:   0.005624
+T:   0.000864
 C: 6542 primes under 65535
-T:   0.004422
+T:   0.000888
 C: 6542 primes under 65535
-T:   0.005053
+T:   0.000921
 C: 6542 primes under 65535
-T:   0.004127
+T:   0.000852
 C: 6542 primes under 65535
-T:   0.004365
+T:   0.001005
 C: 6542 primes under 65535
-T:   0.004083
+T:   0.000973
 C: 6542 primes under 65535
-T:   0.004379
+T:   0.000819
 C: 6542 primes under 65535
-T:   0.003925
+T:   0.000830
 C: 6542 primes under 65535
-T:   0.004592
+T:   0.000920
 C: 6542 primes under 65535
-T:   0.004486
+T:   0.000966
 C: 6542 primes under 65535
-T:   0.003852
+T:   0.000886
 C: 6542 primes under 65535
-T:   0.003981
+T:   0.000983
 C: 6542 primes under 65535
-T:   0.004126
+T:   0.000800
 C: 6542 primes under 65535
-T:   0.004530
+T:   0.001172
 C: 6542 primes under 65535
-T:   0.020159
+T:   0.000722
 C: 6542 primes under 65535
-T:   0.005028
+T:   0.000785
 C: 6542 primes under 65535
-T:   0.017710
+T:   0.000869
 C: 6542 primes under 65535
-T:   0.004585
+T:   0.000912
 C: 6542 primes under 65535
-T:   0.004057
+T:   0.001050
 P: 18
 C: 6542 primes under 65535
-T:   0.004770
+T:   0.001014
 C: 6542 primes under 65535
-T:   0.005452
+T:   0.000844
 C: 6542 primes under 65535
-T:   0.004664
+T:   0.001042
 C: 6542 primes under 65535
-T:   0.006348
+T:   0.001089
 C: 6542 primes under 65535
-T:   0.004540
+T:   0.000903
 C: 6542 primes under 65535
-T:   0.008944
+T:   0.000833
 C: 6542 primes under 65535
-T:   0.005241
+T:   0.001004
 C: 6542 primes under 65535
-T:   0.005169
+T:   0.000895
 C: 6542 primes under 65535
-T:   0.004511
+T:   0.000916
 C: 6542 primes under 65535
-T:   0.004583
+T:   0.000855
 C: 6542 primes under 65535
-T:   0.005054
+T:   0.001039
 C: 6542 primes under 65535
-T:   0.006742
+T:   0.000938
 C: 6542 primes under 65535
-T:   0.004682
+T:   0.001065
 C: 6542 primes under 65535
-T:   0.004617
+T:   0.000885
 C: 6542 primes under 65535
-T:   0.004281
+T:   0.001170
 C: 6542 primes under 65535
-T:   0.004302
+T:   0.000831
 C: 6542 primes under 65535
-T:   0.005118
+T:   0.000847
 C: 6542 primes under 65535
-T:   0.005114
+T:   0.001201
 C: 6542 primes under 65535
-T:   0.005213
+T:   0.000950
 C: 6542 primes under 65535
-T:   0.006702
+T:   0.001086
 P: 19
 C: 6542 primes under 65535
-T:   0.004531
+T:   0.001115
 C: 6542 primes under 65535
-T:   0.007033
+T:   0.001096
 C: 6542 primes under 65535
-T:   0.005320
+T:   0.001030
 C: 6542 primes under 65535
-T:   0.006106
+T:   0.000964
 C: 6542 primes under 65535
-T:   0.005857
+T:   0.000938
 C: 6542 primes under 65535
-T:   0.005872
+T:   0.000992
 C: 6542 primes under 65535
-T:   0.008803
+T:   0.000954
 C: 6542 primes under 65535
-T:   0.005644
+T:   0.000986
 C: 6542 primes under 65535
-T:   0.005452
+T:   0.001136
 C: 6542 primes under 65535
-T:   0.005309
+T:   0.001109
 C: 6542 primes under 65535
-T:   0.005084
+T:   0.000862
 C: 6542 primes under 65535
-T:   0.006865
+T:   0.001081
 C: 6542 primes under 65535
-T:   0.006065
+T:   0.000990
 C: 6542 primes under 65535
-T:   0.007787
+T:   0.001172
 C: 6542 primes under 65535
-T:   0.006718
+T:   0.000957
 C: 6542 primes under 65535
-T:   0.004458
+T:   0.000915
 C: 6542 primes under 65535
-T:   0.006274
+T:   0.001013
 C: 6542 primes under 65535
-T:   0.006611
+T:   0.001062
 C: 6542 primes under 65535
-T:   0.005056
+T:   0.001018
 C: 6542 primes under 65535
-T:   0.004946
+T:   0.001006
 P: 20
 C: 6542 primes under 65535
-T:   0.006194
+T:   0.001073
 C: 6542 primes under 65535
-T:   0.040938
+T:   0.001068
 C: 6542 primes under 65535
-T:   0.006361
+T:   0.001002
 C: 6542 primes under 65535
-T:   0.005905
+T:   0.001009
 C: 6542 primes under 65535
-T:   0.006165
+T:   0.001517
 C: 6542 primes under 65535
-T:   0.004797
+T:   0.001124
 C: 6542 primes under 65535
-T:   0.005810
+T:   0.000929
 C: 6542 primes under 65535
-T:   0.006656
+T:   0.001062
 C: 6542 primes under 65535
-T:   0.005641
+T:   0.001162
 C: 6542 primes under 65535
-T:   0.004953
+T:   0.001126
 C: 6542 primes under 65535
-T:   0.005413
+T:   0.001099
 C: 6542 primes under 65535
-T:   0.005125
+T:   0.000986
 C: 6542 primes under 65535
-T:   0.005565
+T:   0.001022
 C: 6542 primes under 65535
-T:   0.005128
+T:   0.000985
 C: 6542 primes under 65535
-T:   0.004917
+T:   0.000954
 C: 6542 primes under 65535
-T:   0.005540
+T:   0.001141
 C: 6542 primes under 65535
-T:   0.005174
+T:   0.001055
 C: 6542 primes under 65535
-T:   0.004723
+T:   0.001089
 C: 6542 primes under 65535
-T:   0.005490
+T:   0.000919
 C: 6542 primes under 65535
-T:   0.005291
+T:   0.001039
 P: 21
 C: 6542 primes under 65535
-T:   0.010228
+T:   0.001182
 C: 6542 primes under 65535
-T:   0.005374
+T:   0.001186
 C: 6542 primes under 65535
-T:   0.005992
+T:   0.001044
 C: 6542 primes under 65535
-T:   0.007056
+T:   0.001709
 C: 6542 primes under 65535
-T:   0.006531
+T:   0.001176
 C: 6542 primes under 65535
-T:   0.006959
+T:   0.002153
 C: 6542 primes under 65535
-T:   0.005801
+T:   0.001016
 C: 6542 primes under 65535
-T:   0.007589
+T:   0.001050
 C: 6542 primes under 65535
-T:   0.006517
+T:   0.001014
 C: 6542 primes under 65535
-T:   0.007548
+T:   0.001379
 C: 6542 primes under 65535
-T:   0.007329
+T:   0.001167
 C: 6542 primes under 65535
-T:   0.005580
+T:   0.001025
 C: 6542 primes under 65535
-T:   0.012782
+T:   0.001032
 C: 6542 primes under 65535
-T:   0.005678
+T:   0.001410
 C: 6542 primes under 65535
-T:   0.005449
+T:   0.001031
 C: 6542 primes under 65535
-T:   0.005173
+T:   0.001147
 C: 6542 primes under 65535
-T:   0.006298
+T:   0.001407
 C: 6542 primes under 65535
-T:   0.005083
+T:   0.001023
 C: 6542 primes under 65535
-T:   0.007007
+T:   0.000986
 C: 6542 primes under 65535
-T:   0.006570
+T:   0.001242
 P: 22
 C: 6542 primes under 65535
-T:   0.006664
+T:   0.001183
 C: 6542 primes under 65535
-T:   0.006165
+T:   0.001185
 C: 6542 primes under 65535
-T:   0.005648
+T:   0.001207
 C: 6542 primes under 65535
-T:   0.005904
+T:   0.001044
 C: 6542 primes under 65535
-T:   0.005402
+T:   0.001132
 C: 6542 primes under 65535
-T:   0.007611
+T:   0.001208
 C: 6542 primes under 65535
-T:   0.006325
+T:   0.001218
 C: 6542 primes under 65535
-T:   0.013811
+T:   0.001062
 C: 6542 primes under 65535
-T:   0.005997
+T:   0.001065
 C: 6542 primes under 65535
-T:   0.009660
+T:   0.001325
 C: 6542 primes under 65535
-T:   0.006302
+T:   0.001176
 C: 6542 primes under 65535
-T:   0.007405
+T:   0.001190
 C: 6542 primes under 65535
-T:   0.006564
+T:   0.001145
 C: 6542 primes under 65535
-T:   0.009650
+T:   0.001335
 C: 6542 primes under 65535
-T:   0.005498
+T:   0.001232
 C: 6542 primes under 65535
-T:   0.006128
+T:   0.001262
 C: 6542 primes under 65535
-T:   0.017388
+T:   0.001295
 C: 6542 primes under 65535
-T:   0.005567
+T:   0.001255
 C: 6542 primes under 65535
-T:   0.009701
+T:   0.001023
 C: 6542 primes under 65535
-T:   0.006997
+T:   0.001098
 P: 23
 C: 6542 primes under 65535
-T:   0.009688
+T:   0.001124
 C: 6542 primes under 65535
-T:   0.007008
+T:   0.001028
 C: 6542 primes under 65535
-T:   0.012603
+T:   0.001443
 C: 6542 primes under 65535
-T:   0.006678
+T:   0.001863
 C: 6542 primes under 65535
-T:   0.006632
+T:   0.001168
 C: 6542 primes under 65535
-T:   0.006322
+T:   0.001390
 C: 6542 primes under 65535
-T:   0.005886
+T:   0.001198
 C: 6542 primes under 65535
-T:   0.005625
+T:   0.001353
 C: 6542 primes under 65535
-T:   0.017280
+T:   0.001141
 C: 6542 primes under 65535
-T:   0.006787
+T:   0.001188
 C: 6542 primes under 65535
-T:   0.006400
+T:   0.001143
 C: 6542 primes under 65535
-T:   0.007434
+T:   0.001174
 C: 6542 primes under 65535
-T:   0.005731
+T:   0.001455
 C: 6542 primes under 65535
-T:   0.007770
+T:   0.001253
 C: 6542 primes under 65535
-T:   0.007977
+T:   0.001160
 C: 6542 primes under 65535
-T:   0.006231
+T:   0.001446
 C: 6542 primes under 65535
-T:   0.007961
+T:   0.001175
 C: 6542 primes under 65535
-T:   0.005845
+T:   0.001119
 C: 6542 primes under 65535
-T:   0.007236
+T:   0.001327
 C: 6542 primes under 65535
-T:   0.005801
+T:   0.001196
 P: 24
 C: 6542 primes under 65535
-T:   0.008717
+T:   0.001318
 C: 6542 primes under 65535
-T:   0.007286
+T:   0.001310
 C: 6542 primes under 65535
-T:   0.008642
+T:   0.001281
 C: 6542 primes under 65535
-T:   0.006529
+T:   0.002235
 C: 6542 primes under 65535
-T:   0.007229
+T:   0.001168
 C: 6542 primes under 65535
-T:   0.009327
+T:   0.001355
 C: 6542 primes under 65535
-T:   0.012859
+T:   0.001539
 C: 6542 primes under 65535
-T:   0.011182
+T:   0.001389
 C: 6542 primes under 65535
-T:   0.011982
+T:   0.001277
 C: 6542 primes under 65535
-T:   0.007471
+T:   0.001500
 C: 6542 primes under 65535
-T:   0.006535
+T:   0.001702
 C: 6542 primes under 65535
-T:   0.007316
+T:   0.001244
 C: 6542 primes under 65535
-T:   0.007342
+T:   0.001465
 C: 6542 primes under 65535
-T:   0.006234
+T:   0.001147
 C: 6542 primes under 65535
-T:   0.006694
+T:   0.001396
 C: 6542 primes under 65535
-T:   0.007421
+T:   0.001528
 C: 6542 primes under 65535
-T:   0.007542
+T:   0.001336
 C: 6542 primes under 65535
-T:   0.010139
+T:   0.001361
 C: 6542 primes under 65535
-T:   0.008655
+T:   0.001251
 C: 6542 primes under 65535
-T:   0.007310
+T:   0.001254
 P: 25
 C: 6542 primes under 65535
-T:   0.008525
+T:   0.001302
 C: 6542 primes under 65535
-T:   0.008332
+T:   0.001321
 C: 6542 primes under 65535
-T:   0.006868
+T:   0.001474
 C: 6542 primes under 65535
-T:   0.015168
+T:   0.001287
 C: 6542 primes under 65535
-T:   0.006796
+T:   0.001477
 C: 6542 primes under 65535
-T:   0.006142
+T:   0.001368
 C: 6542 primes under 65535
-T:   0.010059
+T:   0.001308
 C: 6542 primes under 65535
-T:   0.007117
+T:   0.001402
 C: 6542 primes under 65535
-T:   0.007221
+T:   0.001609
 C: 6542 primes under 65535
-T:   0.009576
+T:   0.001164
 C: 6542 primes under 65535
-T:   0.007434
+T:   0.001264
 C: 6542 primes under 65535
-T:   0.011984
+T:   0.001398
 C: 6542 primes under 65535
-T:   0.006792
+T:   0.001603
 C: 6542 primes under 65535
-T:   0.006170
+T:   0.001434
 C: 6542 primes under 65535
-T:   0.006377
+T:   0.001319
 C: 6542 primes under 65535
-T:   0.013964
+T:   0.001326
 C: 6542 primes under 65535
-T:   0.008529
+T:   0.001276
 C: 6542 primes under 65535
-T:   0.007795
+T:   0.001383
 C: 6542 primes under 65535
-T:   0.007452
+T:   0.001277
 C: 6542 primes under 65535
-T:   0.024705
+T:   0.001546
 P: 26
 C: 6542 primes under 65535
-T:   0.006954
+T:   0.001294
 C: 6542 primes under 65535
-T:   0.006610
+T:   0.001299
 C: 6542 primes under 65535
-T:   0.007856
+T:   0.001349
 C: 6542 primes under 65535
-T:   0.022385
+T:   0.001489
 C: 6542 primes under 65535
-T:   0.006803
+T:   0.001656
 C: 6542 primes under 65535
-T:   0.008831
+T:   0.001317
 C: 6542 primes under 65535
-T:   0.007616
+T:   0.001269
 C: 6542 primes under 65535
-T:   0.007096
+T:   0.001447
 C: 6542 primes under 65535
-T:   0.006235
+T:   0.001464
 C: 6542 primes under 65535
-T:   0.007069
+T:   0.001636
 C: 6542 primes under 65535
-T:   0.008426
+T:   0.001460
 C: 6542 primes under 65535
-T:   0.007275
+T:   0.001428
 C: 6542 primes under 65535
-T:   0.007808
+T:   0.001677
 C: 6542 primes under 65535
-T:   0.008977
+T:   0.001470
 C: 6542 primes under 65535
-T:   0.008932
+T:   0.001528
 C: 6542 primes under 65535
-T:   0.009302
+T:   0.001300
 C: 6542 primes under 65535
-T:   0.008087
+T:   0.001401
 C: 6542 primes under 65535
-T:   0.007381
+T:   0.001539
 C: 6542 primes under 65535
-T:   0.008706
+T:   0.001348
 C: 6542 primes under 65535
-T:   0.011815
+T:   0.001240
 P: 27
 C: 6542 primes under 65535
-T:   0.009976
+T:   0.001397
 C: 6542 primes under 65535
-T:   0.008807
+T:   0.001370
 C: 6542 primes under 65535
-T:   0.009037
+T:   0.001584
 C: 6542 primes under 65535
-T:   0.007790
+T:   0.001406
 C: 6542 primes under 65535
-T:   0.010118
+T:   0.001326
 C: 6542 primes under 65535
-T:   0.007414
+T:   0.001456
 C: 6542 primes under 65535
-T:   0.007157
+T:   0.001403
 C: 6542 primes under 65535
-T:   0.009286
+T:   0.001551
 C: 6542 primes under 65535
-T:   0.008499
+T:   0.001688
 C: 6542 primes under 65535
-T:   0.011630
+T:   0.001687
 C: 6542 primes under 65535
-T:   0.007851
+T:   0.001360
 C: 6542 primes under 65535
-T:   0.009399
+T:   0.001520
 C: 6542 primes under 65535
-T:   0.007540
+T:   0.001524
 C: 6542 primes under 65535
-T:   0.008733
+T:   0.001553
 C: 6542 primes under 65535
-T:   0.010746
+T:   0.001580
 C: 6542 primes under 65535
-T:   0.007797
+T:   0.001575
 C: 6542 primes under 65535
-T:   0.008340
+T:   0.001232
 C: 6542 primes under 65535
-T:   0.009009
+T:   0.001932
 C: 6542 primes under 65535
-T:   0.011682
+T:   0.001577
 C: 6542 primes under 65535
-T:   0.008150
+T:   0.001472
 P: 28
 C: 6542 primes under 65535
-T:   0.011850
+T:   0.001667
 C: 6542 primes under 65535
-T:   0.009207
+T:   0.001484
 C: 6542 primes under 65535
-T:   0.008994
+T:   0.001707
 C: 6542 primes under 65535
-T:   0.010371
+T:   0.001469
 C: 6542 primes under 65535
-T:   0.007946
+T:   0.001446
 C: 6542 primes under 65535
-T:   0.008885
+T:   0.001761
 C: 6542 primes under 65535
-T:   0.007311
+T:   0.001745
 C: 6542 primes under 65535
-T:   0.010373
+T:   0.001746
 C: 6542 primes under 65535
-T:   0.009142
+T:   0.001913
 C: 6542 primes under 65535
-T:   0.007701
+T:   0.001701
 C: 6542 primes under 65535
-T:   0.007574
+T:   0.001896
 C: 6542 primes under 65535
-T:   0.007919
+T:   0.001670
 C: 6542 primes under 65535
-T:   0.009383
+T:   0.001536
 C: 6542 primes under 65535
-T:   0.008297
+T:   0.001549
 C: 6542 primes under 65535
-T:   0.009594
+T:   0.001411
 C: 6542 primes under 65535
-T:   0.009659
+T:   0.001655
 C: 6542 primes under 65535
-T:   0.011077
+T:   0.001559
 C: 6542 primes under 65535
-T:   0.009955
+T:   0.001552
 C: 6542 primes under 65535
-T:   0.007977
+T:   0.001367
 C: 6542 primes under 65535
-T:   0.009048
+T:   0.001731
 P: 29
 C: 6542 primes under 65535
-T:   0.011877
+T:   0.001642
 C: 6542 primes under 65535
-T:   0.008642
+T:   0.001475
 C: 6542 primes under 65535
-T:   0.009599
+T:   0.001631
 C: 6542 primes under 65535
-T:   0.007514
+T:   0.001460
 C: 6542 primes under 65535
-T:   0.009695
+T:   0.001587
 C: 6542 primes under 65535
-T:   0.008694
+T:   0.001780
 C: 6542 primes under 65535
-T:   0.009131
+T:   0.001892
 C: 6542 primes under 65535
-T:   0.011608
+T:   0.001744
 C: 6542 primes under 65535
-T:   0.009258
+T:   0.001445
 C: 6542 primes under 65535
-T:   0.007828
+T:   0.001459
 C: 6542 primes under 65535
-T:   0.012296
+T:   0.001477
 C: 6542 primes under 65535
-T:   0.010880
+T:   0.001553
 C: 6542 primes under 65535
-T:   0.008998
+T:   0.001385
 C: 6542 primes under 65535
-T:   0.010155
+T:   0.001518
 C: 6542 primes under 65535
-T:   0.008062
+T:   0.001802
 C: 6542 primes under 65535
-T:   0.008320
+T:   0.001705
 C: 6542 primes under 65535
-T:   0.007988
+T:   0.001851
 C: 6542 primes under 65535
-T:   0.009727
+T:   0.001548
 C: 6542 primes under 65535
-T:   0.008058
+T:   0.001831
 C: 6542 primes under 65535
-T:   0.010677
+T:   0.001635
 P: 30
 C: 6542 primes under 65535
-T:   0.034909
+T:   0.001724
 C: 6542 primes under 65535
-T:   0.012066
+T:   0.002115
 C: 6542 primes under 65535
-T:   0.009492
+T:   0.001645
 C: 6542 primes under 65535
-T:   0.007786
+T:   0.001615
 C: 6542 primes under 65535
-T:   0.008828
+T:   0.001538
 C: 6542 primes under 65535
-T:   0.010409
+T:   0.001717
 C: 6542 primes under 65535
-T:   0.007620
+T:   0.001557
 C: 6542 primes under 65535
-T:   0.009281
+T:   0.001601
 C: 6542 primes under 65535
-T:   0.010927
+T:   0.001649
 C: 6542 primes under 65535
-T:   0.008321
+T:   0.001803
 C: 6542 primes under 65535
-T:   0.011224
+T:   0.001412
 C: 6542 primes under 65535
-T:   0.008010
+T:   0.001740
 C: 6542 primes under 65535
-T:   0.010497
+T:   0.001492
 C: 6542 primes under 65535
-T:   0.010439
+T:   0.001491
 C: 6542 primes under 65535
-T:   0.010863
+T:   0.001819
 C: 6542 primes under 65535
-T:   0.012858
+T:   0.001724
 C: 6542 primes under 65535
-T:   0.008320
+T:   0.001797
 C: 6542 primes under 65535
-T:   0.017539
+T:   0.001578
 C: 6542 primes under 65535
-T:   0.008297
+T:   0.001524
 C: 6542 primes under 65535
-T:   0.010204
+T:   0.001763
