@@ -13,6 +13,14 @@
 #define TOPHALF "▀"
 #define BOTTOMHALF "▄"
 
+// used for finding left, right, top, and bottom of a subsection
+#define PBLOCK_MIN(id, pdivs, size) (id*(size)/pdivs)
+#define PBLOCK_MAX(id, pdivs, size) ((id+1)*(size)/pdivs - 1)
+
+// we read one extra row and column in each direction, to find neighbors
+#define PBLOCK_READ_MIN(id, pdivs, size) MAX(PBLOCK_MIN(id, pdivs, size) - 1, 0)
+#define PBLOCK_READ_MAX(id, pdivs, size) MIN(PBLOCK_MAX(id, pdivs, size) + 1, size - 1)
+
 /*
 +----+
 |▄█▀ |
@@ -45,15 +53,15 @@ A cell has 8 neighbors
 
 void printGame(char ** board, int size) {
     // print upper frame
-    printf("+");
+    printf("╔");
     for(int i = 0; i < size; i ++) {
-        printf("-");
+        printf("═");
     }
-    printf("+\n");
+    printf("╗\n");
 
     for(int row = 0; row < size; row += 2) {
         // print left frame
-        printf("|");
+        printf("║");
         // print cells
         for(int col = 0; col < size; col ++) {
             char top = board[row][col];
@@ -70,15 +78,15 @@ void printGame(char ** board, int size) {
                 printf(" ");
         }
         // print right frame
-        printf("|\n");
+        printf("║\n");
     }
 
     // print lower frame
-    printf("+");
+    printf("╚");
     for(int i = 0; i < size; i ++) {
-        printf("-");
+        printf("═");
     }
-    printf("+\n");
+    printf("╝\n");
 }
 
 int cellNeighbors(char ** board, int cols, int rows, int x, int y) {
@@ -92,6 +100,33 @@ int cellNeighbors(char ** board, int cols, int rows, int x, int y) {
         }
     }
     return neighbors;
+}
+
+char ** arrayToMatrix(char * array, int w, int h) {
+    char ** matrix = (char **) malloc (h * sizeof(char *));
+    for(int i = 0; i < h; i ++) {
+        matrix[i] = &array[i*w];
+    }
+
+    return matrix;
+}
+
+// takes a rectangular section of the board
+char * subBoard(char ** board, int size, int x, int y, int w, int h) {
+    char * sub = (char *)malloc(w * h * sizeof(char));
+    for(int iy = 0; iy < h; iy ++) {
+        // copy from board row, offset by x, w bytes
+        // copy to sub board at position defined by iy
+        memcpy(sub + iy*w, board[y + iy] + x, w);
+    }
+    return sub;
+}
+
+// copies a rectangular subsection back into the full board
+void joinBoard(char ** board, int size, char * sub, int x, int y, int w, int h) {
+    for(int iy = 0; iy < h; iy ++) {
+        memcpy(board[y + iy] + x, sub + iy*w, w);
+    }
 }
 
 int main (int argc, char *argv[])
@@ -148,10 +183,7 @@ int main (int argc, char *argv[])
     if(!id) {
         // use calloc so it starts empty
         boardStorage = (char *) calloc(size * size, sizeof(char));
-        board = (char **) malloc (size * sizeof(char *));
-        for(i = 0; i < size; i ++) {
-            board[i] = &boardStorage[i*size];
-        }
+        board = arrayToMatrix(boardStorage, size, size);
 
         // place r-pentomino
         // c is left top corner position
