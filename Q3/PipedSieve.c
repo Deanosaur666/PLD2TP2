@@ -118,7 +118,6 @@ int main (int argc, char *argv[])
          prime = index + 2;
       }
       if (p > 1) {
-         // TODO: this pipeline is BAD
          // use a pipeline instead of a broadcast
          //MPI_Bcast (&prime,  1, MPI_INT, 0, MPI_COMM_WORLD);
          // processes after 1 recieve
