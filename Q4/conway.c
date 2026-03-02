@@ -234,10 +234,12 @@ int main (int argc, char *argv[])
         pause = true;
 
     // Initialize ncurses
-    if(redraw) {
+    if(redraw || pause) {
         initscr();      // Start curses mode
-        cbreak();       // Disable line buffering (non-canonical mode)
-        noecho();       // Disable echoing
+        if(redraw) {
+            cbreak();       // Disable line buffering (non-canonical mode)
+            noecho();       // Disable echoing
+        }
         keypad(stdscr, TRUE);  // Enable special keys (arrow keys, F1, etc.)
     }
     
@@ -448,7 +450,8 @@ int main (int argc, char *argv[])
 
     /* Stop the timer */
     elapsed_time += MPI_Wtime();
-
+    
+    refresh();
     endwin();
     fflush(stdout);
 
