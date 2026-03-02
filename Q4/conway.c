@@ -278,6 +278,13 @@ int main (int argc, char *argv[])
             printGame(board, size, size);
             if(redraw)
                 refresh();
+
+            if(pause) {
+                c = getch();
+                if(c == 'q') {
+                    quit = 1;
+                }
+            }
         }
     }
 
@@ -417,8 +424,11 @@ int main (int argc, char *argv[])
                 
                 joinBoard(board, size, recvBoards[i], x, y, w, h);
                 free(recvBoards[i]);
+
+                free(sentBoards[i]);
             }
             free(recvBoards);
+            free(sentBoards);
 
             free(recv_requests);
             free(recv_statuses);
