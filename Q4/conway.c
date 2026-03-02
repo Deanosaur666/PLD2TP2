@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <ncurses.h>
+
 #define MIN(a,b)  ((a)<(b)?(a):(b))
 #define MAX(a,b)  ((a)>(b)?(a):(b))
 
@@ -14,12 +16,17 @@
 #define BOTTOMHALF "▄"
 
 // used for finding left, right, top, and bottom of a subsection
-#define PBLOCK_MIN(id, pdivs, size) (id*(size)/pdivs)
-#define PBLOCK_MAX(id, pdivs, size) ((id+1)*(size)/pdivs - 1)
+// "size" here is the size of the whole board, not the sub-board
+#define PBLOCK_MIN(pos, pdivs, size) (pos*(size)/pdivs)
+#define PBLOCK_MAX(pos, pdivs, size) ((pos+1)*(size)/pdivs - 1)
 
 // we read one extra row and column in each direction, to find neighbors
-#define PBLOCK_READ_MIN(id, pdivs, size) MAX(PBLOCK_MIN(id, pdivs, size) - 1, 0)
-#define PBLOCK_READ_MAX(id, pdivs, size) MIN(PBLOCK_MAX(id, pdivs, size) + 1, size - 1)
+#define PBLOCK_READ_MIN(pos, pdivs, size) MAX(PBLOCK_MIN(pos, pdivs, size) - 1, 0)
+#define PBLOCK_READ_MAX(pos, pdivs, size) MIN(PBLOCK_MAX(pos, pdivs, size) + 1, size - 1)
+
+// find a process's row and column position
+#define PBLOCK_COL(id, pcols, prows) (id % pcols)
+#define PBLOCK_ROW(id, pcols, prows) (id / pcols)
 
 /*
 +----+
@@ -51,22 +58,31 @@ A cell has 8 neighbors
 
 */
 
-void printGame(char ** board, int size) {
+void cursorToHome() {
+    // Write the sequence for clearing the display:
+    // \x1B[2J - Clears the visible window
+    // \x1B[3J - Clears the scroll back
+    // \x1B[1;1H - Move cursor back to its home coordinates (top left)
+    fputs("\x1B[3J\x1B[1;1H", stdout);  
+    fflush(stdout);
+}
+
+void printGame(char ** board, int w, int h) {
     // print upper frame
     printf("╔");
-    for(int i = 0; i < size; i ++) {
+    for(int i = 0; i < w; i ++) {
         printf("═");
     }
     printf("╗\n");
 
-    for(int row = 0; row < size; row += 2) {
+    for(int row = 0; row < h; row += 2) {
         // print left frame
         printf("║");
         // print cells
-        for(int col = 0; col < size; col ++) {
+        for(int col = 0; col < w; col ++) {
             char top = board[row][col];
             char bottom = 0; 
-            if(row+1 < size)
+            if(row+1 < h)
                 bottom = board[row+1][col];
             if(top && bottom)
                 printf(FULLBLOCK);
@@ -83,10 +99,12 @@ void printGame(char ** board, int size) {
 
     // print lower frame
     printf("╚");
-    for(int i = 0; i < size; i ++) {
+    for(int i = 0; i < w; i ++) {
         printf("═");
     }
     printf("╝\n");
+
+    fflush(stdout);
 }
 
 int cellNeighbors(char ** board, int cols, int rows, int x, int y) {
@@ -100,6 +118,19 @@ int cellNeighbors(char ** board, int cols, int rows, int x, int y) {
         }
     }
     return neighbors;
+}
+
+char cellNextState(char ** board, int cols, int rows, int x, int y) {
+    int n = cellNeighbors(board, cols, rows, x, y);
+    // birth
+    if(!board[y][x] && n == 3)
+        return 1;
+    // sustain
+    else if(board[y][x] && (n == 2 || n == 3))
+        return 1;
+    // die
+    else
+        return 0;
 }
 
 char ** arrayToMatrix(char * array, int w, int h) {
@@ -131,21 +162,43 @@ void joinBoard(char ** board, int size, char * sub, int x, int y, int w, int h) 
 
 int main (int argc, char *argv[])
 {
+    char    c;              /* character input */
+    char    quit;           /* Do I quit or not? */
     double  elapsed_time;   /* Parallel execution time */
     int     id;             /* Process ID number */
     int     p;              /* Number of processes */
     int     j;              /* Number of iterations */
     int     i;
+    int     step;           /* Current iteration */
     int     size;           /* Size of the board */
     bool    draw;           /* Drawing enabled */
+    bool    pause;          /* Pause between steps */
+    bool    redraw;         /* Draw over last frame */
     int     pcols;          /* Process columns */
     int     prows;          /* Process rows */
-    /* Version of the board from the previous frame. Read from. */
+    /* Full board. */
     char    *boardStorage;  /* All cells */
     char    **board;        /* All cells, in a matrix*/
+
+    char    **sentBoards;    /* all sent sub boards, stored by p0 */
+    
+    /* Last frame's board. Read from. */
+    char    *inBoardStorage; /* The section of the board this process uses */
+    char    **inBoard;     /* The section of the board this process uses, in a matrix */
+
     /* Next frame's board. Written to. */
     char    *outBoardStorage; /* The section of the board this process uses */
     char    **outBoard;     /* The section of the board this process uses, in a matrix */
+
+    /* Received boards, only used by p0 */
+    char    **recvBoards;   /* All received sub boards */
+    MPI_Request *recv_requests; /* Array of requests */
+    MPI_Status  *recv_statuses;   /* Array of statuses */
+
+
+    // send and recieve requests and status, for Isend and Irecv
+    MPI_Request send_request, recv_request;
+    MPI_Status send_status, recv_status;
 
     MPI_Init (&argc, &argv);
 
@@ -155,17 +208,38 @@ int main (int argc, char *argv[])
 
     if (argc < 3) {
         if (!id)
-            printf ("Command line: %s <size> <iterations> [-D]\n", argv[0]);
+            printf ("Command line: %s <size> <iterations> [-D|-r|-p]\n", argv[0]);
         MPI_Finalize();
         exit (1);
     }
-    if(argc == 4 && strcmp(argv[3], "-D"))
-        draw = false;
-    else
-        draw = true;
+    
+    draw = true;
+    redraw = false;
+    pause = false;
+    quit = 0;
+
+    for(int i = 3; i < argc; i ++) {
+        if(strcmp(argv[i], "-D") == 0)
+            draw = false;
+        if(strcmp(argv[i], "-r") == 0)
+            redraw = true;
+        if(strcmp(argv[i], "-p") == 0)
+            pause = true;
+    }
 
     size = atoi(argv[1]);
     j = atoi(argv[2]);
+
+    if(j == 0)
+        pause = true;
+
+    // Initialize ncurses
+    if(redraw) {
+        initscr();      // Start curses mode
+        cbreak();       // Disable line buffering (non-canonical mode)
+        noecho();       // Disable echoing
+        keypad(stdscr, TRUE);  // Enable special keys (arrow keys, F1, etc.)
+    }
     
     if (size < 3) {
       if (!id) printf ("Size must be at least 3\n");
@@ -182,7 +256,9 @@ int main (int argc, char *argv[])
     // create the main board
     if(!id) {
         // use calloc so it starts empty
+        // REMEMBER TO FREE BOARD
         boardStorage = (char *) calloc(size * size, sizeof(char));
+        // REMEMBER TO FREE MATRIX
         board = arrayToMatrix(boardStorage, size, size);
 
         // place r-pentomino
@@ -194,7 +270,13 @@ int main (int argc, char *argv[])
         board[c + 1][c + 1] = 1;
         board[c + 2][c + 1] = 1;
 
-        printGame(board, size);
+        if(draw) {
+            if(redraw)
+                cursorToHome();
+            printGame(board, size, size);
+            if(redraw)
+                refresh();
+        }
     }
 
     // calculate rows and columns for checkerboard decomposition
@@ -206,19 +288,183 @@ int main (int argc, char *argv[])
     while(p % pcols != 0) pcols --;
     prows = p/pcols;
 
+    // my sub-board position
+    int prow = PBLOCK_ROW(id, pcols, prows);
+    int pcol = PBLOCK_COL(id, pcols, prows);
+    int x = PBLOCK_MIN(pcol, pcols, size);
+    int w = (PBLOCK_MAX(pcol, pcols, size) - x) + 1;
+    int y = PBLOCK_MIN(prow, prows, size);
+    int h = (PBLOCK_MAX(prow, prows, size) - y) + 1;
+
+    int read_x = PBLOCK_READ_MIN(pcol, pcols, size);
+    int read_w = (PBLOCK_READ_MAX(pcol, pcols, size) - read_x) + 1;
+    int read_y = PBLOCK_READ_MIN(prow, prows, size);
+    int read_h = (PBLOCK_READ_MAX(prow, prows, size) - read_y) + 1;
+
+    int read_x_offset = x - read_x; // 1 or 0
+    int read_y_offset = y - read_y; // 1 or 0
+
 
     /* Start the timer */
     elapsed_time = -MPI_Wtime();
 
+    step = 0;
+
+    // if j is 0, we loop infinitely
+    while(!quit && (j <= 0 || step++ < j)) {
+        // get read to recieve my sub-board from split
+        if(id > 0) {
+            // REMEMBER TO FREE IN BOARD
+            inBoardStorage = (char *)malloc(read_w*read_h*sizeof(char));
+            MPI_Irecv(inBoardStorage, read_w*read_h, MPI_CHAR, 0, 0, MPI_COMM_WORLD, &recv_request);
+        }
+        // send and prepare to recieve sub boards to/from everybody
+        if(!id) {
+            // REMEMBER TO FREE SENT BOARDS
+            sentBoards = (char **)malloc(p * sizeof(char *));
+            // my sub board
+            // REMEMBER TO FREE SUB BOARD
+            inBoardStorage = subBoard(board, size, read_x, read_y, read_w, read_h);
+            sentBoards[0] = inBoardStorage;
+
+            // ready to recieve
+            // REMEMBER TO FREE
+            recv_requests = (MPI_Request *)malloc(p * sizeof(MPI_Request));
+            recv_statuses = (MPI_Status *)malloc(p * sizeof(MPI_Status));
+            recvBoards = (char **)malloc(p * sizeof(char *));
+            recvBoards[0] = NULL; // not receiving one from myself
+            
+            for(i = 1; i < p; i ++) {
+                int prow = PBLOCK_ROW(i, pcols, prows);
+                int pcol = PBLOCK_COL(i, pcols, prows);
+                
+                // send
+
+                int read_x = PBLOCK_READ_MIN(pcol, pcols, size);
+                int read_w = (PBLOCK_READ_MAX(pcol, pcols, size) - read_x) + 1;
+                int read_y = PBLOCK_READ_MIN(prow, prows, size);
+                int read_h = (PBLOCK_READ_MAX(prow, prows, size) - read_y) + 1;
+                // REMEMBER TO FREE SUB BOARD
+                sentBoards[i] = subBoard(board, size, read_x, read_y, read_w, read_h);
+                MPI_Isend(sentBoards[i], read_w*read_h, MPI_CHAR, i, 0, MPI_COMM_WORLD, &send_request);
+
+                // recieve
+                int x = PBLOCK_MIN(pcol, pcols, size);
+                int w = (PBLOCK_MAX(pcol, pcols, size) - x) + 1;
+                int y = PBLOCK_MIN(prow, prows, size);
+                int h = (PBLOCK_MAX(prow, prows, size) - y) + 1;
+
+                // REMEMBER TO FREE
+                recvBoards[i] = malloc(w*h*sizeof(char));
+
+                MPI_Irecv(recvBoards[i], w*h, MPI_CHAR, i, 0, MPI_COMM_WORLD, &recv_requests[i]);
+            }
+        }
+        // wait till I've gotten my board
+        if(id > 0) {
+            MPI_Wait(&recv_request, &recv_status);
+        }
+        // REMEMBER TO FREE MATRIX
+        inBoard = arrayToMatrix(inBoardStorage, read_w, read_h);
+
+        // REMEMBER TO FREE OUT BOARD
+        outBoardStorage = (char *)malloc(w*h*sizeof(char));
+        // REMEMBER TO FREE MATRIX
+        outBoard = arrayToMatrix(outBoardStorage, w, h);
+
+        // process all cells
+        for(int row = 0; row < h; row ++) {
+            for(int col = 0; col < w; col ++) {
+                outBoard[row][col] = cellNextState(inBoard, read_w, read_h, col + read_x_offset, row + read_y_offset);                
+            }
+        }
+
+        // in board is not in use anymore
+        free(inBoard);
+        free(inBoardStorage);
+
+        // send back to process 0
+        if(id > 0) {
+            MPI_Isend(outBoardStorage, w*h, MPI_CHAR, 0, 0, MPI_COMM_WORLD, &send_request);
+            // wait till fully sent
+            MPI_Wait(&send_request, &send_status);
+            // then FREE
+            free(outBoard);
+            free(outBoardStorage);
+        }
+
+        // process 0 recieving modified boards
+        if(!id) {
+
+            joinBoard(board, size, outBoardStorage, x, y, w, h);
+            free(outBoard);
+            free(outBoardStorage);
+
+            for(i = 1; i < p; i ++) {
+                int prow = PBLOCK_ROW(i, pcols, prows);
+                int pcol = PBLOCK_COL(i, pcols, prows);
+                int x = PBLOCK_MIN(pcol, pcols, size);
+                int w = (PBLOCK_MAX(pcol, pcols, size) - x) + 1;
+                int y = PBLOCK_MIN(prow, prows, size);
+                int h = (PBLOCK_MAX(prow, prows, size) - y) + 1;
+
+                //printf("P: %d\tX: %d\tY: %d\tW: %d\t H: %d\n", i, x, y, w, h);
+                //printf("Col: %d/%d\tRow: %d/%d\n", pcol, pcols, prow, prows);
+                
+                MPI_Wait(&recv_requests[i], &recv_statuses[i]);
+                
+                joinBoard(board, size, recvBoards[i], x, y, w, h);
+                free(recvBoards[i]);
+            }
+            free(recvBoards);
+
+            free(recv_requests);
+            free(recv_statuses);
+
+            if(draw) {
+                if(redraw)
+                    cursorToHome();
+                printGame(board, size, size);
+                if(redraw)
+                    refresh();
+
+                if(pause) {
+                    c = getch();
+                    if(c == 'q') {
+                        quit = 1;
+                    }
+                }
+            }
+        }
+
+        // if paused, check for quit
+        if(pause)
+            MPI_Bcast(&quit, 1, MPI_CHAR, 0, MPI_COMM_WORLD);
+        if(quit)
+            break;
+        
+    }
+
 
     /* Stop the timer */
-
     elapsed_time += MPI_Wtime();
+
+    endwin();
+    fflush(stdout);
 
     /* Print the results */
     if (!id) {
         printf ("T: %10.6f\n", elapsed_time);
     }
     MPI_Finalize ();
+
+    /* Cleanup */
+    if(!id) {
+        // FREE BOARD
+        free(boardStorage);
+        // FREE MATRIX
+        free(board);
+    }
+
     return 0;
 }
