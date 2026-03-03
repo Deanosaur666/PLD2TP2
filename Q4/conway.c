@@ -162,7 +162,7 @@ void joinBoard(char ** board, int size, char * sub, int x, int y, int w, int h) 
 
 int main (int argc, char *argv[])
 {
-    char    c;              /* character input */
+    int    c;              /* character input */
     char    quit;           /* Do I quit or not? */
     double  elapsed_time;   /* Parallel execution time */
     int     id;             /* Process ID number */
@@ -236,11 +236,10 @@ int main (int argc, char *argv[])
     // Initialize ncurses
     if(redraw || pause) {
         initscr();      // Start curses mode
-        if(redraw) {
-            cbreak();       // Disable line buffering (non-canonical mode)
-            noecho();       // Disable echoing
-        }
-        keypad(stdscr, TRUE);  // Enable special keys (arrow keys, F1, etc.)
+        clear();
+        noecho();       // Disable echoing            
+        cbreak();       // Disable line buffering (non-canonical mode)
+        keypad(stdscr, true);  // Enable special keys (arrow keys, F1, etc.)
     }
     
     if (size < 3) {
@@ -437,8 +436,6 @@ int main (int argc, char *argv[])
                 if(redraw)
                     cursorToHome();
                 printGame(board, size, size);
-                if(redraw)
-                    refresh();
 
                 if(pause) {
                     c = getch();
@@ -446,6 +443,9 @@ int main (int argc, char *argv[])
                         quit = 1;
                     }
                 }
+
+                if(redraw)
+                    refresh();
             }
         }
 
