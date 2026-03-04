@@ -1,3 +1,13 @@
+/*
+
+This program uses the ncurses library
+Install ncurses with:
+sudo apt install libncurses-dev
+
+Please use the Makefile for building, or append -l and -lncurses as gcc options
+
+*/
+
 #include <mpi.h>
 #include <math.h>
 #include <stdio.h>
