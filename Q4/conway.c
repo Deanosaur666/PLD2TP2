@@ -4,7 +4,7 @@ This program uses the ncurses library
 Install ncurses with:
 sudo apt install libncurses-dev
 
-Please use the Makefile for building, or append -l and -lncurses as gcc options
+Please use the Makefile for building, or append -lm and -lncurses as gcc options
 
 */
 
